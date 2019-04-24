@@ -1,0 +1,13 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "54443fb1d83871c8c6131b285a32b006"
+build_time: [1556145959, 885576000]
+inputs:
+  "/Users/juliando/Downloads/Test/Test/MarkerScene.swift": [1555970420, 0]
+  "/Users/juliando/Downloads/Test/Test/Views/CreateMarkerViewController.swift": [1556145583, 0]
+  "/Users/juliando/Downloads/Test/Test/Views/MainViewController.swift": [1555964104, 0]
+  "/Users/juliando/Downloads/Test/Test/Views/ViewController.swift": [1555963011, 0]
+  "/Users/juliando/Downloads/Test/Test/AppDelegate.swift": [1555963011, 0]
+  "/Users/juliando/Downloads/Test/Test/Views/CameraViewController.swift": [1556137826, 0]
+  "/Users/juliando/Downloads/Test/Test/Builders/MarkerBuilder.swift": [1555973910, 0]
+  "/Users/juliando/Downloads/Test/Test/Models/Marker.swift": [1555965208, 0]
+  "/Users/juliando/Downloads/Test/Test/Views/PreviewViewController.swift": [1556137826, 0]

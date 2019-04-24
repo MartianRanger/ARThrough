@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6t8-Mu-aFV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CreateMarker-->
+        <scene sceneID="dkx-Z5-i2q">
+            <objects>
+                <viewController storyboardIdentifier="CreateMarker" title="CreateMarker" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6t8-Mu-aFV" customClass="CreateMarkerViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LbS-Zv-o9L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OG7-RK-hf4">
+                                <rect key="frame" x="125" y="594" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create Marker Set"/>
+                                <connections>
+                                    <action selector="ARView:" destination="6t8-Mu-aFV" eventType="touchDown" id="MPJ-vu-EIm"/>
+                                    <segue destination="AhJ-hc-02F" kind="show" identifier="createMarker" id="D8o-aH-h2D"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3z-Ja-QwD">
+                                <rect key="frame" x="25" y="140" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhR-bG-bmX">
+                                <rect key="frame" x="25" y="169" width="326" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jNr-tJ-2gn"/>
+                    </view>
+                    <connections>
+                        <outlet property="StartAR" destination="OG7-RK-hf4" id="CaL-To-8K5"/>
+                        <outlet property="titleText" destination="mhR-bG-bmX" id="dKu-Kq-ytN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H0M-5k-xbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="124.58770614692655"/>
+        </scene>
+        <!--ARMarker-->
+        <scene sceneID="UpI-3R-r7L">
+            <objects>
+                <viewController storyboardIdentifier="ARMarker" title="ARMarker" id="AhJ-hc-02F" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hb9-Qn-ZyP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UVq-t0-Hmj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UVq-t0-Hmj" secondAttribute="height" multiplier="375:667" id="nzb-8n-8uc"/>
+                                    <constraint firstAttribute="width" secondItem="UVq-t0-Hmj" secondAttribute="height" multiplier="375:667" id="y5Y-Zn-xQ4"/>
+                                </constraints>
+                            </arscnView>
+                            <skView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" sceneName="MarkerScene.sks" translatesAutoresizingMaskIntoConstraints="NO" id="74a-eI-wiD">
+                                <rect key="frame" x="16" y="580" width="343" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="74a-eI-wiD" secondAttribute="height" multiplier="343:67" id="nYj-au-TJk"/>
+                                </constraints>
+                            </skView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwh-OX-KO4">
+                                <rect key="frame" x="66" y="422" width="101" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="27"/>
+                                <state key="normal" title="Yes" backgroundImage="Blank_Button.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="o9x-u2-tet" kind="show" id="aOI-MY-IkI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yc-St-nxT">
+                                <rect key="frame" x="292" y="30" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Finish Set"/>
+                                <connections>
+                                    <action selector="createMarkers:" destination="Hb9-Qn-ZyP" eventType="touchUpInside" id="DkM-XP-opd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q74-tz-HKV">
+                                <rect key="frame" x="214" y="422" width="103" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="27"/>
+                                <state key="normal" title="No" backgroundImage="Blank_Button.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UVq-t0-Hmj" firstAttribute="bottom" secondItem="wX1-Y8-R7T" secondAttribute="bottom" id="CMA-9E-aAv"/>
+                            <constraint firstItem="UVq-t0-Hmj" firstAttribute="top" secondItem="Hb9-Qn-ZyP" secondAttribute="topMargin" id="Io3-g3-tK5"/>
+                            <constraint firstItem="UVq-t0-Hmj" firstAttribute="trailing" secondItem="wX1-Y8-R7T" secondAttribute="trailing" id="KMp-hb-pcc"/>
+                            <constraint firstItem="UVq-t0-Hmj" firstAttribute="leading" secondItem="wX1-Y8-R7T" secondAttribute="leading" id="L7X-Oe-sI9"/>
+                            <constraint firstItem="UVq-t0-Hmj" firstAttribute="bottom" secondItem="wX1-Y8-R7T" secondAttribute="bottom" id="ZSt-zJ-9T8"/>
+                            <constraint firstItem="UVq-t0-Hmj" firstAttribute="trailing" secondItem="wX1-Y8-R7T" secondAttribute="trailing" id="ZWf-PG-dvM"/>
+                            <constraint firstItem="UVq-t0-Hmj" firstAttribute="top" secondItem="Hb9-Qn-ZyP" secondAttribute="topMargin" constant="20" id="cRH-ZJ-eG2"/>
+                            <constraint firstItem="UVq-t0-Hmj" firstAttribute="leading" secondItem="wX1-Y8-R7T" secondAttribute="leading" id="vvF-1U-gHH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wX1-Y8-R7T"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCG-dQ-us6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896.79999999999995" y="124.58770614692655"/>
+        </scene>
+        <!--PlayerStoryboard-->
+        <scene sceneID="mMo-al-q6L">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PlayerStoryboard" storyboardName="PlayerStoryboard" id="5yy-Wk-8Zy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m69-pe-ba5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301" y="-373"/>
+        </scene>
+        <!--CameraViewController-->
+        <scene sceneID="HL8-aP-V3Q">
+            <objects>
+                <viewController title="CameraViewController" id="o9x-u2-tet" customClass="CameraViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g9I-bg-vo2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkJ-Z0-W9p">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRr-OR-czl">
+                                        <rect key="frame" x="100" y="562" width="176" height="73"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
+                                        <state key="normal" title="Take Picture" backgroundImage="Blank_Button.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="camera:" destination="o9x-u2-tet" eventType="touchUpInside" id="WEo-Jr-bId"/>
+                                            <segue destination="yFh-V7-eIl" kind="presentation" identifier="showPhoto_segue" id="ClH-QM-EuC"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaC-Wd-WaZ">
+                                        <rect key="frame" x="300" y="28" width="37" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Done"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DkJ-Z0-W9p" secondAttribute="height" multiplier="375:667" id="HM9-Jv-nvM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DkJ-Z0-W9p" firstAttribute="leading" secondItem="g9I-bg-vo2" secondAttribute="leading" id="Hp5-7E-qOb"/>
+                            <constraint firstItem="DkJ-Z0-W9p" firstAttribute="bottom" secondItem="RPu-hF-GPi" secondAttribute="bottom" id="I34-XY-xAh"/>
+                            <constraint firstItem="DkJ-Z0-W9p" firstAttribute="top" secondItem="g9I-bg-vo2" secondAttribute="top" id="YbD-SG-5R2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RPu-hF-GPi"/>
+                    </view>
+                    <connections>
+                        <outlet property="takePicture" destination="RRr-OR-czl" id="4l0-x1-0oC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gn5-3Y-LrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="124.58770614692655"/>
+        </scene>
+        <!--PreviewViewController-->
+        <scene sceneID="3xI-BQ-BHw">
+            <objects>
+                <viewController title="PreviewViewController" id="yFh-V7-eIl" customClass="PreviewViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LJm-1t-RPL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmE-7p-wjf">
+                                <rect key="frame" x="15" y="38" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="yFh-V7-eIl" eventType="touchUpInside" id="j1z-2w-eOb"/>
+                                    <segue destination="o9x-u2-tet" kind="presentation" id="rFJ-Nb-Aq3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAZ-w0-dRH">
+                                <rect key="frame" x="319" y="38" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="addPhoto:" destination="LJm-1t-RPL" eventType="touchUpInside" id="wP5-EJ-Meg"/>
+                                    <action selector="savePhoto:" destination="LJm-1t-RPL" eventType="touchUpInside" id="PiA-Jq-Pxs"/>
+                                    <segue destination="o9x-u2-tet" kind="show" id="zeU-aG-pFG"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eC-OS-mVs">
+                                <rect key="frame" x="0.0" y="105" width="375" height="562"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wAv-IK-fAV"/>
+                        <connections>
+                            <outlet property="photo" destination="0eC-OS-mVs" id="q1E-n7-RSS"/>
+                            <outlet property="savePhoto" destination="qAZ-w0-dRH" id="RiA-Js-LfD"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENR-pO-gEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Blank_Button.png" width="176" height="73"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="aOI-MY-IkI"/>
+    </inferredMetricsTieBreakers>
+</document>

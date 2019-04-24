@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RcR-wI-YDW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Instructions-->
+        <scene sceneID="M17-DY-v1v">
+            <objects>
+                <viewController storyboardIdentifier="Instructions" title="Instructions" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vgm-4O-xu4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lU7-wd-nCT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sve-ZF-BmH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpG-CB-Zk6">
+                                <rect key="frame" x="58" y="548" width="258" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="I6M-9g-1vJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="33"/>
+                                <state key="normal" title="Back" backgroundImage="Blank_Button.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RcR-wI-YDW" kind="show" id="qPs-Js-0ZB"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="How to Play.png" translatesAutoresizingMaskIntoConstraints="NO" id="pQ5-se-wK8">
+                                <rect key="frame" x="67" y="67" width="240" height="73"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gem.png" translatesAutoresizingMaskIntoConstraints="NO" id="pri-wn-kno">
+                                <rect key="frame" x="164" y="478" width="50" height="62"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Instructions Label.png" translatesAutoresizingMaskIntoConstraints="NO" id="9LK-gZ-IQH">
+                                <rect key="frame" x="67" y="140" width="240" height="337"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="337" id="Qut-NW-6St"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. USE YOUR FINGER TO PLACE A MARKER ON THE OBJECT YOU WISH TO BE INTERACTED WITH." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="11" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="P8a-r1-UCD">
+                                <rect key="frame" x="82" y="157" width="208" height="305"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="9mw-Ry-AAp"/>
+                                    <constraint firstAttribute="height" constant="305" id="Plq-Kl-Pml"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="305" id="m54-cN-aVa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P8a-r1-UCD" firstAttribute="top" secondItem="lU7-wd-nCT" secondAttribute="top" constant="157" id="12h-QJ-LfS"/>
+                            <constraint firstItem="Sve-ZF-BmH" firstAttribute="leading" secondItem="lU7-wd-nCT" secondAttribute="leading" id="7ih-Il-XkK"/>
+                            <constraint firstItem="P8a-r1-UCD" firstAttribute="centerX" secondItem="pQ5-se-wK8" secondAttribute="centerX" id="BUD-Wq-iKS"/>
+                            <constraint firstItem="9LK-gZ-IQH" firstAttribute="leading" secondItem="7Yw-IU-YLz" secondAttribute="leading" constant="67" id="Ezc-m7-SAQ"/>
+                            <constraint firstItem="9LK-gZ-IQH" firstAttribute="centerX" secondItem="Sve-ZF-BmH" secondAttribute="centerX" id="GqK-P4-ZJf"/>
+                            <constraint firstItem="P8a-r1-UCD" firstAttribute="leading" secondItem="7Yw-IU-YLz" secondAttribute="leading" constant="82" id="HYS-l4-4nv"/>
+                            <constraint firstItem="BpG-CB-Zk6" firstAttribute="top" secondItem="pri-wn-kno" secondAttribute="bottom" constant="8" symbolic="YES" id="I4h-z9-E8z"/>
+                            <constraint firstItem="9LK-gZ-IQH" firstAttribute="top" secondItem="pQ5-se-wK8" secondAttribute="bottom" id="LX2-1S-xfo"/>
+                            <constraint firstItem="7Yw-IU-YLz" firstAttribute="trailing" secondItem="pri-wn-kno" secondAttribute="trailing" constant="161" id="M7x-OI-pr1"/>
+                            <constraint firstItem="9LK-gZ-IQH" firstAttribute="leading" secondItem="pQ5-se-wK8" secondAttribute="leading" id="MBz-Th-Kic"/>
+                            <constraint firstItem="P8a-r1-UCD" firstAttribute="centerX" secondItem="BpG-CB-Zk6" secondAttribute="centerX" id="NkM-Va-n1q"/>
+                            <constraint firstItem="pri-wn-kno" firstAttribute="leading" secondItem="7Yw-IU-YLz" secondAttribute="leading" constant="164" id="OX9-tH-hcg"/>
+                            <constraint firstItem="Sve-ZF-BmH" firstAttribute="top" secondItem="lU7-wd-nCT" secondAttribute="top" id="V3A-fB-ub2"/>
+                            <constraint firstItem="Sve-ZF-BmH" firstAttribute="bottom" secondItem="7Yw-IU-YLz" secondAttribute="bottom" id="gWc-0d-sHb"/>
+                            <constraint firstItem="P8a-r1-UCD" firstAttribute="centerX" secondItem="9LK-gZ-IQH" secondAttribute="centerX" id="oVY-SX-15A"/>
+                            <constraint firstItem="P8a-r1-UCD" firstAttribute="top" secondItem="pQ5-se-wK8" secondAttribute="bottom" constant="17" id="pb7-zZ-Bxh"/>
+                            <constraint firstItem="pri-wn-kno" firstAttribute="top" secondItem="9LK-gZ-IQH" secondAttribute="bottom" constant="1" id="r0P-Uv-5R3"/>
+                            <constraint firstItem="7Yw-IU-YLz" firstAttribute="bottom" secondItem="BpG-CB-Zk6" secondAttribute="bottom" constant="21" id="xHs-Ln-Otb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Yw-IU-YLz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAh-t3-3Fy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610.39999999999998" y="939.58020989505258"/>
+        </scene>
+        <!--MainMenu-->
+        <scene sceneID="lNh-88-lgH">
+            <objects>
+                <viewController storyboardIdentifier="MainMenu" title="MainMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RcR-wI-YDW" customClass="MainViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S5z-UB-RHD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Start Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Haa-pe-mGF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tR-H4-aBR">
+                                <rect key="frame" x="94" y="426" width="186" height="74"/>
+                                <state key="normal" title="Start" image="Start_Button.png"/>
+                                <connections>
+                                    <segue destination="bE3-lH-3W1" kind="show" identifier="createMarker" id="0Nv-dW-pW2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nor-8P-Pro">
+                                <rect key="frame" x="94" y="541" width="186" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="kji-ju-LAl"/>
+                                </constraints>
+                                <state key="normal" title="Tutorial" image="INSTRUCTIONS_BUTTON.png"/>
+                                <connections>
+                                    <segue destination="Vgm-4O-xu4" kind="presentation" identifier="tutorialSegue" id="6x6-9w-OQ6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nor-8P-Pro" firstAttribute="centerX" secondItem="Haa-pe-mGF" secondAttribute="centerX" id="8bS-K5-hYf"/>
+                            <constraint firstItem="Nor-8P-Pro" firstAttribute="trailing" secondItem="0tR-H4-aBR" secondAttribute="trailing" id="AtN-Ye-38a"/>
+                            <constraint firstItem="Haa-pe-mGF" firstAttribute="bottom" secondItem="6ZP-ow-WYP" secondAttribute="bottom" id="Eau-ZC-U5G"/>
+                            <constraint firstItem="Nor-8P-Pro" firstAttribute="top" secondItem="0tR-H4-aBR" secondAttribute="bottom" constant="41" id="GTD-0j-qI3"/>
+                            <constraint firstItem="Nor-8P-Pro" firstAttribute="leading" secondItem="6ZP-ow-WYP" secondAttribute="leading" constant="94" id="Veh-tu-UtQ"/>
+                            <constraint firstItem="6ZP-ow-WYP" firstAttribute="bottom" secondItem="Nor-8P-Pro" secondAttribute="bottom" constant="60" id="cnw-Tr-nTq"/>
+                            <constraint firstItem="Nor-8P-Pro" firstAttribute="centerX" secondItem="S5z-UB-RHD" secondAttribute="centerX" id="e6M-3s-hFe"/>
+                            <constraint firstItem="Nor-8P-Pro" firstAttribute="leading" secondItem="0tR-H4-aBR" secondAttribute="leading" id="h6g-bQ-Hqh"/>
+                            <constraint firstItem="Haa-pe-mGF" firstAttribute="top" secondItem="S5z-UB-RHD" secondAttribute="top" id="hjb-69-P5i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6ZP-ow-WYP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54C-5s-Inx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610.39999999999998" y="133.5832083958021"/>
+        </scene>
+        <!--CreateMarker-->
+        <scene sceneID="DVU-yP-yxk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateMarker" id="bE3-lH-3W1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LoK-Ob-chs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="201"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background.png" width="375" height="812"/>
+        <image name="Blank_Button.png" width="176" height="73"/>
+        <image name="Gem.png" width="31" height="52"/>
+        <image name="How to Play.png" width="258" height="98"/>
+        <image name="INSTRUCTIONS_BUTTON.png" width="212" height="98"/>
+        <image name="Instructions Label.png" width="258" height="427"/>
+        <image name="Start Screen.jpg" width="375" height="812"/>
+        <image name="Start_Button.png" width="212" height="98"/>
+    </resources>
+</document>
